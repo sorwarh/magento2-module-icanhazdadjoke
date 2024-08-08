@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/system_file.xsd">
+    <system>
+        <tab id="icanhazdadjoke" translate="label" sortOrder="100">
+            <label>Icanhazdadjoke</label>
+        </tab>
+        <section id="icanhazdadjoke" translate="label" sortOrder="10" showInDefault="1">
+            <label>General</label>
+            <tab>icanhazdadjoke</tab>
+            <resource>Sh_Icanhazdadjoke::settings</resource>
+            <group id="general" translate="label" sortOrder="10" showInDefault="1">
+                <label>General Settings</label>
+                <field id="enable" translate="label" type="select" sortOrder="10" showInDefault="1">
+                    <label>Enable Icanhazdadjoke</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="api_url" translate="label comment" sortOrder="20" showInDefault="1" canRestore="1">
+                    <label>API URL</label>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                    <validate>required-entry no-whitespace validate-no-empty</validate>
+                </field>
+                <field id="max_pages" translate="label" type="text" canRestore="1" sortOrder="30" showInDefault="1">
+                    <label>Max Pages</label>
+                    <comment><![CDATA[The API will randomly fetch a number of page within the range of 0 to Max Pages. Max Pages should be within the total number of pages returned by the following API call <strong>total_pages </strong> </br> <code> curl -H "Accept: application/json" https://icanhazdadjoke.com/search </code> ]]></comment>
+                    <validate>validate-number validate-greater-than-zero</validate>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

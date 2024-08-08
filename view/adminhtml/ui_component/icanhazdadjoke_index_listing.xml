@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">icanhazdadjoke_index_listing.icanhazdadjoke_index_listing_data_source</item>
+        </item>
+        <item name="buttons" xsi:type="array">
+            <item name="refresh" xsi:type="array">
+                <item name="label" xsi:type="string" translate="true">Refresh(TODO)</item>
+                <item name="class" xsi:type="string">action primary</item>
+                <item name="url" xsi:type="string">icanhazdadjoke/index/refresh</item>
+            </item>
+        </item>
+    </argument>
+
+    <!-- <settings>
+        <deps>
+            <dep>icanhazdadjoke_index_listing.icanhazdadjoke_index_listing_data_source</dep>
+        </deps>
+        <spinner>jokes_columns</spinner>
+    </settings> -->
+
+    <dataSource name="icanhazdadjoke_index_listing_data_source">
+        <!-- <settings>
+            <storageConfig>
+                <param name="indexField" xsi:type="string">id</param>
+            </storageConfig>
+            <updateUrl path="mui/index/render"/>
+        </settings> -->
+        <aclResource>Sh_Icanhazdadjoke::jokes</aclResource>
+        <dataProvider name="icanhazdadjoke_index_listing_data_source" class="Sh\Icanhazdadjoke\Ui\Component\DataProvider">
+            <settings>
+                <requestFieldName>id</requestFieldName>
+                <primaryFieldName>id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+    <listingToolbar name="listing_top">
+        <settings>
+            <sticky>true</sticky>
+        </settings>
+    </listingToolbar>
+    <columns name="jokes_columns">
+        <column name="id">
+            <settings>
+                <label translate="true">ID</label>
+            </settings>
+        </column>
+        <column name="joke">
+            <settings>
+                <label translate="true">Joke</label>
+            </settings>
+        </column>
+    </columns>
+</listing>

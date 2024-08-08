@@ -1,0 +1,36 @@
+<?php
+
+/** @var \Sh\Icanhazdadjoke\ViewModel\JokeDataProvider $viewModel */
+$viewModel = $block->getViewModel();
+$jokes = $viewModel->getJokesData();
+?>
+
+<?php if (!empty($jokes)): ?>
+    <div class="joke-wrapper">
+        <section class="content">
+            <div class="actions-toolbar">
+                <button id="random-joke-button" class="action show-joke"
+                    data-title="<?= __('Show Random Joke') ?>"><?= __('Next Joke &#129312;') ?></button>
+            </div>
+
+            <div id="joke-container">
+                <!-- The randomly selected joke will be displayed here -->
+            </div>
+        </section>
+
+    </div>
+
+    <script type="text/x-magento-init">
+                                    {
+                                        "#joke-container": {
+                                            "Sh_Icanhazdadjoke/js/jokeManager": {
+                                                "jokes": <?= json_encode($jokes) ?>
+                                            }
+                                        }
+                                    }
+                                </script>
+<?php else: ?>
+    <div class="message warning">
+        <p><?= __('No jokes available.') ?></p>
+    </div>
+<?php endif; ?>

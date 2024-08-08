@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <icanhazdadjoke>
+            <general>
+                <api_data><![CDATA[
+                {"current_page":34,"limit":20,"next_page":35,"previous_page":33,"results":[{"id":"qrHeiqHJmrc","joke":"What is a vampire's favorite fruit? A blood orange."},{"id":"qrOfN7w5ojb","joke":"A cannibal is someone who is fed up with people."},{"id":"rHBQuXLR7h","joke":"Why did the cookie cry?\r\nBecause his mother was a wafer so long"},{"id":"rc2E6EdiNe","joke":"Want to hear my pizza joke? Never mind, it's too cheesy."},{"id":"rcxk3TSKusc","joke":"What did the grape do when he got stepped on? He let out a little wine."},{"id":"rjiyXLZTSf","joke":"What did the 0 say to the 8? Nice belt."},{"id":"rjqOZoO7pb","joke":"Why was the picture sent to prison? It was framed."},{"id":"rzs4T0oWgFd","joke":"Two peanuts were walking down the street. One was a salted."},{"id":"s49h3ElVnrc","joke":"I burned 2000 calories today, I left my food in the oven for too long."},{"id":"s4Me29U0gqc","joke":"Cosmetic surgery used to be such a taboo subject.\r\nNow you can talk about Botox and nobody raises an eyebrow."},{"id":"sHlqrjyPf","joke":"How can you tell a vampire has a cold? They start coffin."},{"id":"sPRnOfiyAAd","joke":"At the boxing match, the dad got into the popcorn line and the line for hot dogs, but he wanted to stay out of the punchline."},{"id":"sPfqWDlq4Ed","joke":"\"Hey, dad, did you get a haircut?\" \"No, I got them all cut.\""},{"id":"sWSSnbaUfqc","joke":"Why is there always a gate around cemeteries? Because people are always dying to get in."},{"id":"scUvsrORKe","joke":"I asked a frenchman if he played video games. He said \"Wii\""},{"id":"scaFQfFlqjb","joke":"My dentist is the best, he even has a little plaque!"},{"id":"scaUn3TfNe","joke":"So, I heard this pun about cows, but it\u2019s kinda offensive so I won\u2019t say it. I don\u2019t want there to be any beef between us. "},{"id":"scpGtcNJJBd","joke":"What do Alexander the Great and Winnie the Pooh have in common? Same middle name."},{"id":"skGtHlORfFd","joke":"What kind of music do planets listen to? Nep-tunes."},{"id":"srjbpzs4h","joke":"Shout out to my grandma, that's the only way she can hear."}],"search_term":"","status":200,"total_jokes":744,"total_pages":38}
+                ]]></api_data>
+                <enable>1</enable>
+                <api_url><![CDATA[https://icanhazdadjoke.com/]]></api_url>
+                <max_pages>38</max_pages>
+            </general>
+        </icanhazdadjoke>
+    </default>
+</config>

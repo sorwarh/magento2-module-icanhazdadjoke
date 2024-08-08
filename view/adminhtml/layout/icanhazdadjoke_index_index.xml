@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="page.main.actions">
+            <block class="Magento\Backend\Block\Template" name="icanhazdadjoke_top_actions" template="Sh_Icanhazdadjoke::actions.phtml"/>
+        </referenceContainer>
+        <referenceContainer name="content">
+            <block class="Magento\Backend\Block\Template" name="icanhazdadjoke_listing" template="Sh_Icanhazdadjoke::listing.phtml">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">Sh\Icanhazdadjoke\ViewModel\JokeDataProvider</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

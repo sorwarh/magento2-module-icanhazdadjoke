@@ -1,0 +1,17 @@
+<?php
+/** @var \Magento\Backend\Block\Template $block */
+
+$url = $block->getUrl('icanhazdadjoke/index/fetch');
+
+?>
+
+<div class="page-actions">
+    <div class="page-actions-inner" data-title="<?= __('Pages') ?>">
+        <div class="page-actions-buttons">
+            <a href="<?= $block->escapeUrl($url) ?>" id="icanhazdadjoke_refresh"
+                title="<?= __('Update Jokes List') ?>" class="action scalable primary">
+                <span><?= __('Update Jokes List') ?></span>
+            </a>
+        </div>
+    </div>
+</div>

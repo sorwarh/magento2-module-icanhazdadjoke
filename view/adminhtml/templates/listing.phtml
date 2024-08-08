@@ -1,0 +1,43 @@
+<?php
+/** @var \Sh\Icanhazdadjoke\ViewModel\JokeDataProvider $viewModel */
+
+$viewModel = $block->getViewModel();
+
+$jokes = $viewModel->getJokesData();
+
+?>
+<?php if (!$viewModel->isEnabled()): ?>
+    <div class="message warning">
+        <div>
+            <?php echo __('The Icanhazdadjoke module is currently disabled. Only data is visible on admin.'); ?>
+        </div>
+    </div>
+<?php endif; ?>
+<div id="icanhazdadjoke-listing" class="admin__data-grid-wrap">
+    <table class="icanhazdadjoke-table data-grid">
+        <thead>
+            <tr>
+                <th class="data-grid-th"><?= __('ID') ?></th>
+                <th class="data-grid-th"><?= __('Joke') ?></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php if (!empty($jokes)): ?>
+                <?php foreach ($jokes as $joke): ?>
+                    <tr class="data-row">
+                        <td>
+                            <div class="data-grid-cell-content"><?= htmlspecialchars($joke['id']) ?></div>
+                        </td>
+                        <td>
+                            <div class="data-grid-cell-content"><?= htmlspecialchars($joke['joke']) ?></div>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <tr>
+                    <td colspan="2"><?= __('No jokes available.') ?></td>
+                </tr>
+            <?php endif; ?>
+        </tbody>
+    </table>
+</div>

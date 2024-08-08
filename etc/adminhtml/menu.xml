@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/menu.xsd">
+    <menu>
+        <add id="Sh_Icanhazdadjoke::jokes" title="Jokes" module="Sh_Icanhazdadjoke" sortOrder="10" parent="Magento_Backend::content" resource="Sh_Icanhazdadjoke::jokes"/>
+        <add id="Sh_Icanhazdadjoke::list" title="List" module="Sh_Icanhazdadjoke" sortOrder="10" resource="Sh_Icanhazdadjoke::jokes" parent="Sh_Icanhazdadjoke::jokes" action="icanhazdadjoke/index/index" />
+    </menu>
+</config>
