@@ -15,7 +15,7 @@ The **Sh Icanhazdadjoke Extension** adds functionality to your Magento store to 
 ## Installation Instructions
 -------------------------
 
-1. Copy the module folder to the `app/code` directory in your Magento root project.
+1. Copy the module folder to the `app/code/Sh/Icanhazdadjoke` directory in your Magento 2 root project.
 
 2. Run the following commands from the Magento root directory to enable the module and update the setup:
     ```bash
